@@ -1,3 +1,4 @@
 Dockerfile-reference
 build_image.sh
 rentzone.env
+.DS_Store
