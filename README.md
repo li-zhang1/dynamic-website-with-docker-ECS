@@ -1,7 +1,9 @@
-# Web Application Deployment with Docker and AWS
+# Theer Tier Web Application Deployment with Docker and ECS
 
 ## Overview
 This project demonstrates how to containerize a web application using Docker and deploy it on AWS with automated scaling and seamless updates.
+
+This project also leverages Terraform to automate the provisioning and management of cloud infrastructure. It simplifies resource deployment, ensures consistency, and enhances scalability. You can find the Terraform configuration files in the following repository: (Terraform Project Repository)[https://github.com/li-zhang1/rentzone-terraform-ecs-project]
 
 ## Features
 - **Dockerized Application**: Built and packaged a web application using Docker to ensure consistency across environments and reduce setup time from hours to minutes.
@@ -51,7 +53,6 @@ docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/rentzone
 3. **Enable Rolling Updates:**
    - Configure ECS service deployment strategies to support rolling updates.
    - Ensure zero-downtime deployments by gradually replacing old tasks with new ones.
-
 
 ## Benefits
 - **Consistency**: Docker ensures the app runs reliably across different environments.
