@@ -15,23 +15,43 @@ This project demonstrates how to containerize a web application using Docker and
 - Amazon Elastic Container Service (ECS)
 - AWS Auto Scaling
 
-## Deployment Steps
-1. **Build and Package the Application**
-   ```sh
-  chmod +x build_image.sh
-  ./build_image.sh 
-  docker image ls
-   ```
-2. **Push the Image to Amazon ECR**
-   ```sh
-   docker tag rentzone <aws_account_id>.dkr.ecr.<region>.amazonaws.com/rentzone
-   aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
-   docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/rentzone
-   ```
-3. **Deploy to Amazon ECS**
-   - Configure an ECS cluster with an Auto Scaling group
-   - Define task definitions and services
-   - Enable rolling updates for zero-downtime deployments
+## 🚀 Deployment Steps
+
+### **1️⃣ Build and Package the Application**
+Ensure the build script is executable and build the Docker image:
+```sh
+chmod +x build_image.sh
+./build_image.sh
+docker image ls
+```
+
+---
+
+### **2️⃣ Push the Image to Amazon ECR**
+Tag the image and push it to your Amazon Elastic Container Registry (ECR):
+```sh
+docker tag rentzone <aws_account_id>.dkr.ecr.<region>.amazonaws.com/rentzone
+
+aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
+
+docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/rentzone
+```
+
+---
+
+### **3️⃣ Deploy to Amazon ECS**
+1. **Configure an ECS Cluster:**
+   - Create an ECS cluster with the desired compute options (EC2 or Fargate).
+   - Set up an Auto Scaling group to manage the cluster instances.
+
+2. **Define Task Definitions and Services:**
+   - Create an ECS task definition specifying container configurations.
+   - Define an ECS service to manage task scheduling and load balancing.
+
+3. **Enable Rolling Updates:**
+   - Configure ECS service deployment strategies to support rolling updates.
+   - Ensure zero-downtime deployments by gradually replacing old tasks with new ones.
+
 
 ## Benefits
 - **Consistency**: Docker ensures the app runs reliably across different environments.
