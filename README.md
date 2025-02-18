@@ -5,6 +5,8 @@ This project demonstrates how to containerize a web application using Docker and
 
 This project also leverages Terraform to automate the provisioning and management of cloud infrastructure. It simplifies resource deployment, ensures consistency, and enhances scalability. You can find the Terraform configuration files in the following repository: [Terraform Project Repository](https://github.com/li-zhang1/rentzone-terraform-ecs-project)
 
+This project also leverages Terraform Modules to automate the infrastructure deployment. The Terraform repository is [here](https://github.com/li-zhang1/rentzone-infrastructure-ecs)
+
 ## Features
 - **Dockerized Application**: Built and packaged a web application using Docker to ensure consistency across environments and reduce setup time from hours to minutes.
 - **Amazon ECR Integration**: Utilized Amazon Elastic Container Registry (ECR) for secure storage and easy sharing of Docker images among team members.
