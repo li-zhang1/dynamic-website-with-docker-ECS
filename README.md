@@ -7,6 +7,7 @@ This project also leverages Terraform to automate the provisioning and managemen
 
 This project also leverages Terraform Modules to automate the infrastructure deployment. The Terraform repository is [here](https://github.com/li-zhang1/rentzone-infrastructure-ecs)
 
+The project also got deployed to AWS using CI/CD pipeline and GitHub Action. Here is the [repository](https://github.com/li-zhang1/rentzone-github-action-terraform-ecs-project)
 ## Features
 - **Dockerized Application**: Built and packaged a web application using Docker to ensure consistency across environments and reduce setup time from hours to minutes.
 - **Amazon ECR Integration**: Utilized Amazon Elastic Container Registry (ECR) for secure storage and easy sharing of Docker images among team members.
